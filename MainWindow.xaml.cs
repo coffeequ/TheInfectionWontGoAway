@@ -29,5 +29,11 @@ namespace Инфекция_не_пройдет
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new WinPasswordRecovery().Show();
+            Close();
+        }
     }
 }
