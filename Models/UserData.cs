@@ -15,9 +15,10 @@ namespace Инфекция_не_пройдет.Models
             UserPassword = stringUserData[0];
         }
 
-        public UserData()
+        public UserData(string UserLogin, string UserPassword)
         {
-
+            this.UserLogin = UserLogin;
+            this.UserPassword = UserPassword;
         }
 
         public string UserLogin { get; set; }

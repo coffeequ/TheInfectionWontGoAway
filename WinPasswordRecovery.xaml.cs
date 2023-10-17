@@ -46,19 +46,58 @@ namespace Инфекция_не_пройдет
         {
             string login = tblogin.Text;
 
-            string passwod = tbPassword.Password;
+            string password = tbPassword.Password;
 
             string passwodCorrect = tbCurrectPassword.Password;
 
             _informationIO = new InformationIO(Path);
 
+            try
+            {
+                if (password != passwodCorrect)
+                {
+                    throw new Exception("Ошибка. Пароли не совпадают");
+                }
+
+                _userData = new UserData(login, password);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             List<UserData> userDatas = _informationIO.LoadData();
+
+            int userIndex = 0;
 
             for (int i = 0; i < userDatas.Count; i++)
             {
+                if (userDatas[i].UserLogin != login)
+                {
+                    userDatas.Add(_userData);
+                    MessageBox.Show("Пароль был обновлён!");
+                    new MainWindow().Show();
+                    Close();
+                }
+                else
+                {
+                    userIndex = i;
 
+                    if (userDatas[userIndex].UserPassword == password)
+                    {
+                        MessageBox.Show("Пароль не должен быть похож на старый");
+                    }
+                    else
+                    {
+                        userDatas[userIndex].UserPassword = passwodCorrect;
+                        _informationIO.SaveData(userDatas);
+                        new MainWindow().Show();
+                        Close();
+                    }
+                }
             }
 
+            
         }
     }
 }

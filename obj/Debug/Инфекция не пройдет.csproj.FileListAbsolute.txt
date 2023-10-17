@@ -15,3 +15,4 @@ C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.pdb
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\WinPasswordRecovery.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\WinPasswordRecovery.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\App.baml

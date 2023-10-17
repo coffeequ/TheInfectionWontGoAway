@@ -46,13 +46,15 @@
 
             <TextBox Grid.Row="0" Grid.Column="0" Width="150" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderBrush="Black" IsReadOnly="True"  Height="60" HorizontalContentAlignment="Left" >Логин</TextBox>
             <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="150" BorderBrush="Black" IsReadOnly="True"  Height="60" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" FontSize="25">Пароль</TextBox>
-            
-            <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"></TextBox>
-            <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"></TextBox>
-            <Label Grid.Row="1" Grid.Column="1" Height="40" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"  Margin="120 5 10 0" FontSize="25"><Run Foreground="#699BF7">Забыли пароль?</Run></Label>
+
+            <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbPassword"></TextBox>
+            <Label Grid.Row="1" Grid.Column="1" Height="40" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"  Margin="120 5 10 0" FontSize="25">
+                <Run Foreground="#699BF7">Забыли пароль?</Run>
+            </Label>
         </Grid>
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="125 70 0 0" Width="200" Height="50" FontSize="20"  Grid.RowSpan="1" Foreground="white" Background="#408243">Войти</Button>
-        <Button Grid.Row="4" Grid.Column="1"  Grid.ColumnSpan="2" Margin="125 0 0 0" Width="200" Height="50" FontSize="20"  Grid.RowSpan="1" Background="#8B8B8B" Foreground="White" Click="Button_Click">Забыл пароль</Button>
+        <Button  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="125 0 0 0"  Width="200" Height="60" FontSize="20"   Foreground="white" Background="#408243" Click="btnComeIn">Войти</Button>
+        <Button Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="2" Margin="125 0 0 0" Width="200" Height="60" FontSize="20"  Grid.RowSpan="1" Background="#8B8B8B" Foreground="White" Click="Button_Click">Забыл пароль</Button>
         <Label Grid.Row="4"></Label>
 
     </Grid>

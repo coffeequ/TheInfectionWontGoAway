@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Инфекция_не_пройдет.Models
 {
+    /// <summary>
+    /// Класс для вывода и ввода данных в лист
+    /// </summary>
     class InformationIO
     {
         private readonly string Path;
@@ -15,20 +18,38 @@ namespace Инфекция_не_пройдет.Models
         {
             this.Path = Path;
         }
-
+        /// <summary>
+        /// Метод позволяет загружать данные в лист где будут хранится все пользователи. Если файла с пользователями нет, то создает новый, а если он есть берет из него все данные
+        /// </summary>
+        /// <returns></returns>
         public List<UserData> LoadData()
         {
             List<UserData> userDatas = new List<UserData>();
 
-            if (File.Exists(Path))
+            var fileExists = File.Exists(Path);
+
+            if (fileExists)
             {
                 using (StreamReader sr = new StreamReader(Path))
                 {
-                    string[] InfoFile = sr.ReadToEnd().Split(new char[] {'\n'});
+                    string tempSr = sr.ReadToEnd();
 
-                    for (int i = 0; i < InfoFile.Length; i++)
+                    sr.Close();
+
+                    if (tempSr == "")
                     {
-                        userDatas.Add(new UserData(InfoFile[i].Split(new char[] {','})));
+                        File.CreateText(Path).Dispose();
+                        
+                        return new List<UserData>();
+                    }
+                    else
+                    {
+                        string[] InfoFile = sr.ReadToEnd().Split(new char[] { '\n' });
+
+                        for (int i = 0; i < InfoFile.Length; i++)
+                        {
+                             userDatas.Add(new UserData(InfoFile[i].Split(new char[] { ',' })));
+                        }
                     }
                 }
                 return userDatas;
@@ -39,6 +60,10 @@ namespace Инфекция_не_пройдет.Models
             return new List<UserData>();
         }
 
+        /// <summary>
+        /// Метод для сохранения данных в файл
+        /// </summary>
+        /// <param name="userDatas"></param>
         public void SaveData(List<UserData> userDatas)
         {
             using (StreamWriter sw = new StreamWriter(Path))

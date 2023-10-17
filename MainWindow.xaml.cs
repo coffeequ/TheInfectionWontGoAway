@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Инфекция_не_пройдет.Models;
 
 namespace Инфекция_не_пройдет
 {
@@ -20,6 +21,14 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class MainWindow : Window
     {
+        private UserData _userData;
+
+        private InformationIO _informationIO;
+
+        private readonly string Path = $"{Environment.CurrentDirectory}\\UserData.txt";
+
+        private List<UserData> _userDatas;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -34,6 +43,60 @@ namespace Инфекция_не_пройдет
         {
             new WinPasswordRecovery().Show();
             Close();
+        }
+
+        private void btnComeIn(object sender, RoutedEventArgs e)
+        {
+
+            _informationIO = new InformationIO(Path);
+
+            _userDatas = new List<UserData>();
+
+            try
+            {
+                _userDatas = _informationIO.LoadData(); ;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Close();
+            }
+
+            string login = tbLogin.Text;
+
+            string password = tbPassword.Text;
+
+            _userData = new UserData(login, password);
+
+            //int placeUser = _userDatas.IndexOf(_userData);
+
+            int indexUser = 0;
+
+            for (int i = 0; i < _userDatas.Count; i++)
+            {
+                if (_userDatas[i].UserLogin == login)
+                {
+                    indexUser = i;
+                }
+            }
+
+            if (_userDatas[indexUser].UserLogin == login && _userDatas[indexUser].UserPassword == password)
+            {
+                //Открываем новое окно
+            }
+            else
+            {
+                if (_userDatas[indexUser].UserLogin != login)
+                {
+                    MessageBox.Show("Пользователя не существует");
+                }
+                else
+                {
+                    MessageBox.Show("Пароль введен не правильно");
+                }
+            }
+
+
         }
     }
 }
