@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Инфекция_не_пройдет.Models
@@ -26,7 +27,7 @@ namespace Инфекция_не_пройдет.Models
         {
             List<UserData> userDatas = new List<UserData>();
 
-            var fileExists = File.Exists(Path);
+            bool fileExists = File.Exists(Path);
 
             if (fileExists)
             {
@@ -34,30 +35,49 @@ namespace Инфекция_не_пройдет.Models
                 {
                     string tempSr = sr.ReadToEnd();
 
-                    sr.Close();
-
                     if (tempSr == "")
                     {
+                        sr.Close();
+
                         File.CreateText(Path).Dispose();
                         
                         return new List<UserData>();
                     }
                     else
                     {
-                        string[] InfoFile = sr.ReadToEnd().Split(new char[] { '\n' });
+                        string[] InfoFile = tempSr.Split(new char[] { '\n' });
 
-                        for (int i = 0; i < InfoFile.Length; i++)
+                        int lengthInfoFile = InfoFile.Length - 1;
+
+                        string[] AllInformation = new string[lengthInfoFile];
+
+                        for (int j = 0; j < InfoFile.Length - 1; j++)
                         {
-                             userDatas.Add(new UserData(InfoFile[i].Split(new char[] { ',' })));
+                            AllInformation[j] = InfoFile[j];
+                        }
+
+                        for (int i = 0; i < AllInformation.Length; i++)
+                        {
+                            AllInformation[i] = AllInformation[i].Remove(AllInformation[i].Length - 1);
+                            AllInformation[i] = AllInformation[i].Replace(" ", "");
+                        }
+
+                        for (int i = 0; i < AllInformation.Length; i++)
+                        {
+                             userDatas.Add(new UserData(AllInformation[i].Split(new char[] { ',' })));
                         }
                     }
                 }
                 return userDatas;
             }
+            else
+            {
+                File.CreateText(Path).Dispose();
 
-            File.CreateText(Path).Dispose();
+                return new List<UserData>();
+            }
 
-            return new List<UserData>();
+
         }
 
         /// <summary>

@@ -76,8 +76,10 @@ namespace Инфекция_не_пройдет
                 {
                     userDatas.Add(_userData);
                     MessageBox.Show("Пароль был обновлён!");
+                    _informationIO.SaveData(userDatas);
                     new MainWindow().Show();
                     Close();
+                    break;
                 }
                 else
                 {
