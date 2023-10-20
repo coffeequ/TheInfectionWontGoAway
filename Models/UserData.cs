@@ -27,7 +27,7 @@ namespace Инфекция_не_пройдет.Models
 
         public string ConclisionInf()
         {
-            return $"Login: {UserLogin}, password {UserPassword}";
+            return $"Login: {UserLogin}, password: {UserPassword}";
         }
     }
 }

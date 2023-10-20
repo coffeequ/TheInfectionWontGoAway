@@ -60,6 +60,8 @@ namespace Инфекция_не_пройдет.Models
                         {
                             AllInformation[i] = AllInformation[i].Remove(AllInformation[i].Length - 1);
                             AllInformation[i] = AllInformation[i].Replace(" ", "");
+                            AllInformation[i] = AllInformation[i].Replace("Login:", "");
+                            AllInformation[i] = AllInformation[i].Replace("password:", "");
                         }
 
                         for (int i = 0; i < AllInformation.Length; i++)

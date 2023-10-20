@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -59,22 +60,42 @@ namespace Инфекция_не_пройдет
             }
             else
             {
-                for (int i = 0; i < userDatas.Count; i++)
+                string InfoUsers = "";
+
+                for (int j = 0; j < userDatas.Count; j++)
                 {
-                    if (userDatas[i].UserLogin == _userData.UserLogin)
-                    {
-                        MessageBox.Show("Логин занят другим пользователем. Пожалуйства введите другой логин");
-                        break;
-                    }
-                    else
-                    {
-                        userDatas.Add(_userData);
-                        MessageBox.Show("Успешная регистрация");
-                        _informationIO.SaveData(userDatas);
-                        new MainWindow().Show();
-                        Close();
-                    }
+                    InfoUsers += userDatas[j].UserLogin + '_';
                 }
+
+                if (Regex.IsMatch(InfoUsers, _userData.UserLogin))
+                {
+                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} уже существует, пожалуйста придумайте новый логин");
+                }
+                else
+                {
+                    userDatas.Add(_userData);
+                    MessageBox.Show("Успешная регистрация");
+                    _informationIO.SaveData(userDatas);
+                    new MainWindow().Show();
+                    Close();
+                }
+
+                //for (int i = 0; i < userDatas.Count; i++)
+                //{
+                //    if (userDatas[i].UserLogin == _userData.UserLogin)
+                //    {
+                //        MessageBox.Show("Логин занят другим пользователем. Пожалуйства введите другой логин");
+                //        break;
+                //    }
+                //    else
+                //    {
+                //        userDatas.Add(_userData);
+                //        MessageBox.Show("Успешная регистрация");
+                //        _informationIO.SaveData(userDatas);
+                //        new MainWindow().Show();
+                //        Close();
+                //    }
+                //}
 
             }
 

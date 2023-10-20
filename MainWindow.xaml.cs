@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -54,7 +55,7 @@ namespace Инфекция_не_пройдет
 
             try
             {
-                _userDatas = _informationIO.LoadData(); ;
+                _userDatas = _informationIO.LoadData();
             }
             catch (Exception ex)
             {
@@ -62,40 +63,36 @@ namespace Инфекция_не_пройдет
                 Close();
             }
 
-            string login = tbLogin.Text;
+            string login = tbLogin.Text.Replace(" ", "");
 
-            string password = tbPassword.Text;
+            string password = tbPassword.Text.Replace(" ", "");
 
             _userData = new UserData(login, password);
 
-            //int placeUser = _userDatas.IndexOf(_userData);
-
-            int indexUser = 0;
-
             for (int i = 0; i < _userDatas.Count; i++)
             {
-                if (_userDatas[i].UserLogin == login)
+                if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword == password)
                 {
-                    indexUser = i;
+                    MessageBox.Show("Переход в программу");
+                }
+
+                if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword != password)
+                {
+                    MessageBox.Show("Пароль был введен не правильно");
                 }
             }
 
-            if (_userDatas[indexUser].UserLogin == login && _userDatas[indexUser].UserPassword == password)
+            string InfoUsers = "";
+
+            for (int j = 0; j < _userDatas.Count; j++)
             {
-                //Открываем новое окно
-            }
-            else
-            {
-                if (_userDatas[indexUser].UserLogin != login)
-                {
-                    MessageBox.Show("Пользователя не существует");
-                }
-                else
-                {
-                    MessageBox.Show("Пароль введен не правильно");
-                }
+                InfoUsers += _userDatas[j].UserLogin + '_';
             }
 
+            if (!Regex.IsMatch(InfoUsers, _userData.UserLogin))
+            {
+                MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
+            }
 
         }
     }
