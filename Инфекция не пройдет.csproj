@@ -55,14 +55,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MainMenuWin.xaml.cs">
+      <DependentUpon>MainMenuWin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\InformationIO.cs" />
     <Compile Include="Models\UserData.cs" />
+    <Compile Include="Pages\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OneGroup.xaml.cs">
+      <DependentUpon>OneGroup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WinPasswordRecovery.xaml.cs">
       <DependentUpon>WinPasswordRecovery.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinReg.xaml.cs">
       <DependentUpon>WinReg.xaml</DependentUpon>
     </Compile>
+    <Page Include="MainMenuWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +88,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OneGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WinPasswordRecovery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

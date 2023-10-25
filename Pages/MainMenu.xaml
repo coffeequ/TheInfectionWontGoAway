@@ -1,0 +1,37 @@
+﻿<Page x:Class="Инфекция_не_пройдет.Pages.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Инфекция_не_пройдет.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainMenu">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5">
+            <Button Grid.Column="2" Click="btnOneGroup" Grid.ColumnSpan="2" FontSize="20" Width="500" Margin="10" Height="100">Добавить количество людей в первую группу</Button>
+            <Button Grid.Column="2" Click="btnTwoGroup" Grid.ColumnSpan="2" FontSize="20" Width="500" Margin="10" Height="100">Добавить количество людей во вторую группу</Button>
+            <Button Grid.Column="2" Click="btnThreeGroup" Grid.ColumnSpan="2" FontSize="20" Width="500" Margin="10" Height="100">Добавить количество людей в третью группу</Button>
+            <Button Grid.Column="2" Click="btnResultGroup" Grid.ColumnSpan="2" FontSize="20" Width="500" Margin="10" Height="100">Рассчитать количество непрямых контактов</Button>
+            <Button Grid.Column="2" Click="btnModelingProcess" Grid.ColumnSpan="2" FontSize="20" Width="500" Margin="10" Height="100">Смоделировать процесс распространнения инфеции</Button>
+        </StackPanel>
+    </Grid>
+</Page>

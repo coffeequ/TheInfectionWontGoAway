@@ -18,3 +18,9 @@ C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\App.baml
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\WinReg.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\WinReg.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\MainMenuWin.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\MainMenu.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\MainMenuWin.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\MainMenu.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\OneGroup.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\OneGroup.baml

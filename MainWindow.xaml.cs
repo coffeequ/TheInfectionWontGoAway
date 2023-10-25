@@ -73,7 +73,8 @@ namespace Инфекция_не_пройдет
             {
                 if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword == password)
                 {
-                    MessageBox.Show("Переход в программу");
+                    new MainMenuWin().Show();
+                    Close();
                 }
 
                 if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword != password)

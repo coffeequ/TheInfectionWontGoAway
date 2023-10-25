@@ -1,0 +1,35 @@
+﻿<Page x:Class="Инфекция_не_пройдет.Pages.OneGroup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Инфекция_не_пройдет.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="OneGroup">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" FontSize="25" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">Введите количество людей с инфекционной болезнью</TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin"></TextBox>
+            <Button  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="125 0 0 0"  Width="200" Height="60" FontSize="20"   Foreground="white" Background="#408243" Click="tbCreateInfectDeases">Войти</Button>
+        </Grid>
+    </Grid>
+</Page>
