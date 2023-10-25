@@ -85,6 +85,7 @@ namespace Инфекция_не_пройдет
                         {
                             MessageBox.Show("Пароль не должен быть похож на старый");
                             break;
+                            //sadada
                         }
                         else
                         {
