@@ -95,5 +95,11 @@ namespace Инфекция_не_пройдет
             }
 
         }
+
+        private void btnWinPasswordRecovery(object sender, RoutedEventArgs e)
+        {
+            new WinPasswordRecovery().Show();
+            Close();
+        }
     }
 }
