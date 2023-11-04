@@ -22,6 +22,12 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
+        {
+            Spravka MySpravka = new Spravka();
+            MySpravka.Show();
+        }
+
         private UserData _userData;
 
         private InformationIO _informationIO;
@@ -35,69 +41,98 @@ namespace Инфекция_не_пройдет
             InitializeComponent();
         }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnReg(object sender, RoutedEventArgs e) //Метод для переход в форму для регистрации
         {
             new WinReg().Show();
             Close();
         }
 
-        private void btnComeIn(object sender, RoutedEventArgs e)
+        private void btnComeIn(object sender, RoutedEventArgs e) //Метод для переход на главную форму
         {
 
-            _informationIO = new InformationIO(Path);
-
-            _userDatas = new List<UserData>();
-
-            try
+            if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Text))
             {
-                _userDatas = _informationIO.LoadData();
+                MessageBox.Show("Введите логин и пароль");
             }
-            catch (Exception ex)
+            else if (string.IsNullOrEmpty(tbLogin.Text))
             {
-                MessageBox.Show(ex.Message);
-                Close();
+                MessageBox.Show("Введите логин");
             }
-
-            string login = tbLogin.Text.Replace(" ", "");
-
-            string password = tbPassword.Text.Replace(" ", "");
-
-            _userData = new UserData(login, password);
-
-            for (int i = 0; i < _userDatas.Count; i++)
+            else if (string.IsNullOrEmpty(tbPassword.Text))
             {
-                if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword == password)
+                MessageBox.Show("Введите пароль");
+            }
+            else
+            {
+                _informationIO = new InformationIO(Path);
+
+                _userDatas = new List<UserData>();
+
+                try
                 {
-                    new MainMenuWin().Show();
+                    _userDatas = _informationIO.LoadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                     Close();
                 }
 
-                if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword != password)
+                string login = tbLogin.Text.Replace(" ", "");
+
+                string password = tbPassword.Text.Replace(" ", "");
+
+                _userData = new UserData(login, password);
+
+                //bool isUserExists = false;
+
+                for (int i = 0; i < _userDatas.Count; i++)
                 {
-                    MessageBox.Show("Пароль был введен не правильно");
+                    if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword == password)
+                    {
+                        new MainMenuWin().Show();
+                        Close();
+                        //isUserExists = true;
+                    }
+
+                    if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword != password)
+                    {
+                        MessageBox.Show("Пароль был введен не правильно");
+                    }
                 }
+
+                string[] InfoUsers = new string[_userDatas.Count];
+
+                for (int j = 0; j < _userDatas.Count; j++)
+                {
+                    InfoUsers[j] = _userDatas[j].UserLogin;
+                }
+
+                bool isExists = false;
+
+                for (int k = 0; k < InfoUsers.Length; k++)
+                {
+                    if (InfoUsers[k] == _userData.UserLogin)
+                    {
+                        isExists = true;
+                    }
+                }
+
+                if (!isExists)
+                {
+                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
+                }
+
+                //bool temp = Regex.IsMatch(InfoUsers, patternUserLogin);
+
+                //if (!Regex.IsMatch(InfoUsers, patternUserLogin))
+                //{
+                //    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
+                //}
             }
-
-            string InfoUsers = "";
-
-            for (int j = 0; j < _userDatas.Count; j++)
-            {
-                InfoUsers += _userDatas[j].UserLogin + '_';
-            }
-
-            if (!Regex.IsMatch(InfoUsers, _userData.UserLogin))
-            {
-                MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
-            }
-
         }
 
-        private void btnWinPasswordRecovery(object sender, RoutedEventArgs e)
+        private void btnWinPasswordRecovery(object sender, RoutedEventArgs e) // Метод для восстановления пароля
         {
             new WinPasswordRecovery().Show();
             Close();

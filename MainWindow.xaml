@@ -5,58 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Инфекция_не_пройдет"
         mc:Ignorable="d"
-        Title="Инфекция не пройдет" Height="1080" Width="1920"
-        WindowState="Maximized">
-    <Grid Loaded="Grid_Loaded">
+        Title="Инфекция не пройдет" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="900" MaxHeight="1080" MinHeight="500" Icon="/Pic/e089aed342a20f2536963561de1323bf.ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="f1" Text="Another Text"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource f1}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource f1}" Executed="F1Shortcut1"/>
+    </Window.CommandBindings>
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="83*"></ColumnDefinition>
+            <ColumnDefinition Width="66*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="42" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left" Margin="125 0 0 0" FontFamily="Calibri">Вход</Label>
-        <Grid Grid.Row="1" Grid.ColumnSpan="9" Grid.RowSpan="3" Margin="65 55 0 0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="145"></RowDefinition>
-            </Grid.RowDefinitions>
-
-            <TextBox Grid.Row="0" Grid.Column="0" Width="150" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderBrush="Black" IsReadOnly="True"  Height="60" HorizontalContentAlignment="Left" >Логин</TextBox>
-            <TextBox VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="150" BorderBrush="Black" IsReadOnly="True"  Height="60" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" FontSize="25">Пароль</TextBox>
-
-            <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin"></TextBox>
-            <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="60" Width="420" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbPassword"></TextBox>
-            <Button BorderBrush="White" Background="White" BorderThickness="0" Grid.Row="1" Grid.Column="1" Height="40" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"  Margin="120 2 10 0" FontSize="25" Click="btnWinPasswordRecovery">
-                <Run Foreground="#699BF7">Забыли пароль?</Run>
-            </Button>
-        </Grid>
-        <Button  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="125 0 0 0"  Width="200" Height="60" FontSize="20"   Foreground="white" Background="#408243" Click="btnComeIn">Войти</Button>
-        <Button Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="2" Margin="125 0 0 0" Width="200" Height="60" FontSize="20"  Grid.RowSpan="1" Background="#8B8B8B" Foreground="White" Click="Button_Click">Зарегистрироваться</Button>
-        <Label Grid.Row="4"></Label>
-
-
+        <Viewbox MinWidth="500"  Width="500">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="168*"></ColumnDefinition>
+                    <ColumnDefinition Width="485*"></ColumnDefinition>
+                    <ColumnDefinition Width="241*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="1" Grid.Column="1" FontSize="24" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left" FontFamily="Calibri">Вход</Label>
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0 0 0 20">
+                    <TextBox Background="#27B1EC" Foreground="White" Focusable="False" Grid.Row="2" Grid.Column="0" Padding="15 0 0 0" Margin="10 0 0 0" Width="150" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderBrush="Black" IsReadOnly="True"  Height="60" HorizontalContentAlignment="Left" >Логин</TextBox>
+                    <TextBox Background="#27B1EC" Foreground="White" Grid.Row="2" Width="300" Grid.Column="1"  Height="60" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                    <TextBox  Background="#27B1EC" Foreground="White" Focusable="False" Margin="10 0 0 0" Padding="15 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="150" BorderBrush="Black" IsReadOnly="True"  Height="60" Grid.Row="3" Grid.Column="0" FontSize="25">Пароль</TextBox>
+                    <TextBox  Background="#27B1EC" Foreground="White" Grid.Row="3" Grid.Column="1"  Height="60" Width="300" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbPassword"></TextBox>
+                </StackPanel>
+                <Button BorderBrush="White" Background="White" BorderThickness="0" Grid.Row="6" Grid.Column="1" Height="40" VerticalAlignment="Top" Width="200" FontSize="25" Click="btnWinPasswordRecovery">
+                    <Run Foreground="#699BF7">Забыли пароль?</Run>
+                </Button>
+                <StackPanel Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" Margin="0 20 0 0">
+                    <Button Grid.Row="4" Grid.Column="1"  FontSize="20" Margin="10" Width="200" Height="50" Foreground="white" Background="#27B1EC" Click="btnComeIn">Войти</Button>
+                    <Button Grid.Row="5" Grid.Column="1"  FontSize="20" Margin="10" Width="200" Height="50" Grid.RowSpan="1" Background="#8B8B8B" Foreground="White" Click="btnReg">Зарегистрироваться</Button>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Window>

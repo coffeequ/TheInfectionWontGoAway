@@ -21,6 +21,12 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class WinPasswordRecovery : Window
     {
+        public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
+        {
+            Spravka MySpravka = new Spravka();
+            MySpravka.Show();
+        }
+
         private UserData _userData;
 
         private InformationIO _informationIO;
@@ -48,16 +54,21 @@ namespace Инфекция_не_пройдет
 
             _informationIO = new InformationIO(Path);
 
+            List<UserData> userDatas = _informationIO.LoadData();
 
             if (password != passwodCorrect)
             {
                 MessageBox.Show("Ошибка пароли не совпадают");
             }
+            else if (userDatas.Count == 0)
+            {
+                MessageBox.Show($"Пользователя с логином {login} не существует");
+            }
             else
             {
                 _userData = new UserData(login, password);
 
-                List<UserData> userDatas = _informationIO.LoadData();
+                //List<UserData> userDatas = _informationIO.LoadData();
 
                 string allLogin = "";
 

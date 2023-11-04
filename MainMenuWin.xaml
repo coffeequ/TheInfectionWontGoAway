@@ -5,10 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Инфекция_не_пройдет"
         mc:Ignorable="d"
-        Title="Инфекция не пройдёт" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Инфекция не пройдёт" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="540" MaxHeight="1080" MinHeight="500">
+    <Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="f1" Text="Another Text"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource f1}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource f1}" Executed="F1Shortcut1"/>
+    </Window.CommandBindings>
     <Grid>
-        <Frame Name="MyFrame" NavigationUIVisibility="Hidden">
-            
-        </Frame>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="144*"></ColumnDefinition>
+            <ColumnDefinition Width="578*"></ColumnDefinition>
+            <ColumnDefinition Width="144*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.ColumnSpan="3" Width="560">
+            <Frame Name="MyFrame" NavigationUIVisibility="Hidden">
+
+            </Frame>
+        </Viewbox>
     </Grid>
 </Window>

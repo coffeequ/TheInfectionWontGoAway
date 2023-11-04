@@ -58,6 +58,7 @@
     <Compile Include="MainMenuWin.xaml.cs">
       <DependentUpon>MainMenuWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\InformationGroup.cs" />
     <Compile Include="Models\InformationIO.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Pages\MainMenu.xaml.cs">
@@ -65,6 +66,15 @@
     </Compile>
     <Compile Include="Pages\OneGroup.xaml.cs">
       <DependentUpon>OneGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThreeGroup.xaml.cs">
+      <DependentUpon>ThreeGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TwoGroup.xaml.cs">
+      <DependentUpon>TwoGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Spravka.xaml.cs">
+      <DependentUpon>Spravka.xaml</DependentUpon>
     </Compile>
     <Compile Include="WinPasswordRecovery.xaml.cs">
       <DependentUpon>WinPasswordRecovery.xaml</DependentUpon>
@@ -93,6 +103,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OneGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ThreeGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TwoGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Spravka.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pic\e089aed342a20f2536963561de1323bf.ico" />
+    <Content Include="Pic\helpbutton_85772.ico" />
+    <Resource Include="Pic\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

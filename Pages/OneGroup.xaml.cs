@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Инфекция_не_пройдет.Models;
 
 namespace Инфекция_не_пройдет.Pages
 {
@@ -25,9 +26,33 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        private InformationGroup informationGroup;
+
+        private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
+
         private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
         {
+            int CountOneGroup = int.Parse(tbOneGroup.Text);
 
+            informationGroup = new InformationGroup(Path);
+
+            try
+            {
+                informationGroup.SaveGroup(CountOneGroup, 2);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                NavigationService.Navigate(new Pages.MainMenu());
+            }
+
+            MessageBox.Show($"Данные записались. В первой группе {CountOneGroup} человек");
+        }
+
+        private void tbClose(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages.MainMenu());
         }
     }
 }

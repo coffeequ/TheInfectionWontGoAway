@@ -25,6 +25,8 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
+
         private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
         {
             
@@ -32,12 +34,12 @@ namespace Инфекция_не_пройдет.Pages
 
         private void btnTwoGroup(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.MainMenu());
+            NavigationService.Navigate(new Pages.TwoGroup());
         }
 
         private void btnThreeGroup(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.MainMenu());
+            NavigationService.Navigate(new Pages.ThreeGroup());
         }
 
         private void btnResultGroup(object sender, RoutedEventArgs e)
@@ -53,6 +55,18 @@ namespace Инфекция_не_пройдет.Pages
         private void btnOneGroup(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Pages.OneGroup());
+        }
+
+        private void gridLoaded(object sender, RoutedEventArgs e)
+        {
+            Models.InformationGroup informationGroup = new Models.InformationGroup(Path);
+
+            informationGroup.CreateFileGroup();
+        }
+
+        private void btnSpravka(object sender, RoutedEventArgs e)
+        {
+            new Spravka().Show();
         }
     }
 }

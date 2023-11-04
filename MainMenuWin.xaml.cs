@@ -22,7 +22,15 @@ namespace Инфекция_не_пройдет
         public MainMenuWin()
         {
             InitializeComponent();
+            
             MyFrame.NavigationService.Navigate(new Pages.MainMenu());
+
+        }
+
+        public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
+        {
+            Spravka MySpravka = new Spravka();
+            MySpravka.Show();
         }
     }
 }
