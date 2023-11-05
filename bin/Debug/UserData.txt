@@ -1,3 +1,2 @@
-Login: asd, password: 123
-Login: asd3, password: 1234
-Login: assdas_, password: 1233
+Login: asd3, password: 123
+Login: rodionova, password: margo

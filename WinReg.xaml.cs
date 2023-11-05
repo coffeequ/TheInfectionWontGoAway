@@ -21,6 +21,12 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class WinReg : Window
     {
+        public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
+        {
+            Spravka MySpravka = new Spravka();
+            MySpravka.Show();
+        }
+
         private Models.UserData _userData;
 
         private InformationIO _informationIO;

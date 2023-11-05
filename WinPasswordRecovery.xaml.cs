@@ -21,6 +21,12 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class WinPasswordRecovery : Window
     {
+        public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
+        {
+            Spravka MySpravka = new Spravka();
+            MySpravka.Show();
+        }
+
         private UserData _userData;
 
         private InformationIO _informationIO;
@@ -38,11 +44,6 @@ namespace Инфекция_не_пройдет
             Close();
         }
 
-        private void GridLoaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void ButtonSwitchPassword(object sender, RoutedEventArgs e)
         {
             string login = tblogin.Text;
@@ -53,16 +54,21 @@ namespace Инфекция_не_пройдет
 
             _informationIO = new InformationIO(Path);
 
+            List<UserData> userDatas = _informationIO.LoadData();
 
             if (password != passwodCorrect)
             {
                 MessageBox.Show("Ошибка пароли не совпадают");
             }
+            else if (userDatas.Count == 0)
+            {
+                MessageBox.Show($"Пользователя с логином {login} не существует");
+            }
             else
             {
                 _userData = new UserData(login, password);
 
-                List<UserData> userDatas = _informationIO.LoadData();
+                //List<UserData> userDatas = _informationIO.LoadData();
 
                 string allLogin = "";
 
@@ -98,46 +104,6 @@ namespace Инфекция_не_пройдет
                         }
                     }
                 }
-            //try
-            //{
-            //    if (password != passwodCorrect)
-            //    {
-            //        throw new Exception("Ошибка. Пароли не совпадают");
-            //    }
-
-            //    _userData = new UserData(login, password);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-
-            
-                //if (userDatas[i].UserLogin != login)
-                //{
-                //    userDatas.Add(_userData);
-                //    MessageBox.Show("Пароль был обновлён!");
-                //    _informationIO.SaveData(userDatas);
-                //    new MainWindow().Show();
-                //    Close();
-                //    break;
-                //}
-                //else
-                //{
-                //    userIndex = i;
-
-                //    if (userDatas[userIndex].UserPassword == password)
-                //    {
-                //        MessageBox.Show("Пароль не должен быть похож на старый");
-                //    }
-                //    else
-                //    {
-                //        userDatas[userIndex].UserPassword = passwodCorrect;
-                //        _informationIO.SaveData(userDatas);
-                //        new MainWindow().Show();
-                //        Close();
-                //    }
-                //}
             }
 
             
