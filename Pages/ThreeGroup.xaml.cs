@@ -32,22 +32,38 @@ namespace Инфекция_не_пройдет.Pages
 
         private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
         {
-            int CountThreeGroup = int.Parse(tbOneGroup.Text);
-
-            informationGroup = new InformationGroup(Path);
+            int CountThreeGroup = 0;
 
             try
             {
-                informationGroup.SaveGroup(CountThreeGroup, 0);
+                CountThreeGroup = int.Parse(tbOneGroup.Text);
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
-
-                NavigationService.Navigate(new Pages.MainMenu());
+                MessageBox.Show("Введите число");
+                return;
             }
 
-            MessageBox.Show($"Данные записались. В третьей группе {CountThreeGroup} человек");
+            informationGroup = new InformationGroup(Path);
+
+            if (CountThreeGroup == 0)
+            {
+                MessageBox.Show("Введите число больше 0");
+            }
+            else
+            {
+                try
+                {
+                    informationGroup.SaveGroup(CountThreeGroup, 2);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                    NavigationService.Navigate(new Pages.MainMenu());
+                }
+                MessageBox.Show($"Данные записались. В первой группе {CountThreeGroup} человек");
+            }
 
         }
 

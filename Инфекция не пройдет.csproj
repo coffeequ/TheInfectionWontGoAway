@@ -46,6 +46,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="TheInfectionWontGoAway">
+      <HintPath>..\Библиотека\TheInfectionWontGoAway\bin\Debug\TheInfectionWontGoAway.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -63,6 +66,9 @@
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Pages\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NumberContatc.xaml.cs">
+      <DependentUpon>NumberContatc.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\OneGroup.xaml.cs">
       <DependentUpon>OneGroup.xaml</DependentUpon>
@@ -99,6 +105,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NumberContatc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,9 +164,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pic\e089aed342a20f2536963561de1323bf.ico" />
+    <Resource Include="Pic\k-8v7jQXcO0.jpg" />
+    <Resource Include="Pic\Logo.png" />
+    <Resource Include="Pic\e089aed342a20f2536963561de1323bf — копия.jpeg" />
+    <Resource Include="Pic\5671647.png" />
     <Content Include="Pic\helpbutton_85772.ico" />
-    <Resource Include="Pic\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

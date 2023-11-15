@@ -44,7 +44,7 @@ namespace Инфекция_не_пройдет.Pages
 
         private void btnResultGroup(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.MainMenu());
+            NavigationService.Navigate(new Pages.NumberContatc());
         }
 
         private void btnModelingProcess(object sender, RoutedEventArgs e)

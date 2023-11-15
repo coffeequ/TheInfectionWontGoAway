@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Инфекция_не_пройдет"
         mc:Ignorable="d"
-        Title="Инфекция не пройдет" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="540" MaxHeight="1080" MinHeight="500">
+        Title="Инфекция не пройдет" Icon="/Pic/Logo.png" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="540" MaxHeight="1080" MinHeight="500">
     <Window.Resources>
         <ResourceDictionary>
             <RoutedUICommand x:Key="f1" Text="Another Text"/>
@@ -18,7 +18,11 @@
         <CommandBinding Command="{StaticResource f1}" Executed="F1Shortcut1"/>
     </Window.CommandBindings>
     <Grid>
-        <Viewbox Width="540" Margin="0 0 225 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="187*"></ColumnDefinition>
+            <ColumnDefinition Width="111*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Viewbox Width="560">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="118*"></RowDefinition>
@@ -41,6 +45,9 @@
                     <Button Margin="10" Width="180" Height="50" FontSize="20" Click="btnExit" Background="#8B8B8B" Foreground="White" >Назад</Button>
                 </StackPanel>
             </Grid>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Width="400">
+            <Image Margin="20" Source="/Pic/k-8v7jQXcO0.jpg" />
         </Viewbox>
     </Grid>
 </Window>

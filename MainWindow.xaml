@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Инфекция_не_пройдет"
         mc:Ignorable="d"
-        Title="Инфекция не пройдет" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="900" MaxHeight="1080" MinHeight="500" Icon="/Pic/e089aed342a20f2536963561de1323bf.ico">
+        Title="Инфекция не пройдет" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="900" MaxHeight="1080" MinHeight="500" Icon="/Pic/Logo.png">
     <Window.Resources>
         <ResourceDictionary>
             <RoutedUICommand x:Key="f1" Text="Another Text"/>
@@ -22,6 +22,9 @@
             <ColumnDefinition Width="83*"></ColumnDefinition>
             <ColumnDefinition Width="66*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="1" Width="450">
+            <Image Grid.Column="2" Margin="20" Width="400" Source="/Pic/k-8v7jQXcO0.jpg" />
+        </Viewbox>
         <Viewbox MinWidth="500"  Width="500">
             <Grid>
                 <Grid.ColumnDefinitions>
