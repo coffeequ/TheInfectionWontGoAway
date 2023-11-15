@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Инфекция_не_пройдет"
         mc:Ignorable="d"
-        Title="Справка" Height="250" Width="500" WindowStartupLocation="CenterScreen" Icon="C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\Pic\helpbutton_85772.ico" MinHeight="250" MaxHeight="250" MinWidth="500" MaxWidth="500">
+        Title="Справка" Height="250" Width="500" WindowStartupLocation="CenterScreen" Icon="/Pic/Logo.png" MinHeight="250" MaxHeight="250" MinWidth="500" MaxWidth="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -19,10 +19,11 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Label Grid.Column="1" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">Справка</Label>
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2">
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2" Margin="5">
             <Label FontSize="16">Разработал: Пугач Савва Евгеньевич</Label>
             <Label FontSize="16">Студент группы ПР-330/б</Label>
             <Label FontSize="16">Версия программы 1.0.</Label>
+            <TextBlock TextWrapping="Wrap" FontSize="16">Проект выполняется в рамках курсового проектирования по МДК 02.01 «Технология разработки программного обеспечения».</TextBlock>
         </StackPanel>
     </Grid>
 </Window>

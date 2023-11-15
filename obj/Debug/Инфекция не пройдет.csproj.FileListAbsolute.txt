@@ -31,3 +31,8 @@ C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Spravka.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет_Content.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Spravka.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\NumberContatc.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\NumberContatc.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.pdb
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.CopyComplete
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.dll
