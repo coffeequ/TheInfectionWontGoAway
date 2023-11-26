@@ -57,6 +57,7 @@
                     <Button Grid.Row="4" Grid.Column="1"  FontSize="20" Margin="10" Width="200" Height="50" Foreground="white" Background="#27B1EC" Click="btnComeIn">Войти</Button>
                     <Button Grid.Row="5" Grid.Column="1"  FontSize="20" Margin="10" Width="200" Height="50" Grid.RowSpan="1" Background="#8B8B8B" Foreground="White" Click="btnReg">Зарегистрироваться</Button>
                 </StackPanel>
+                <Image Name="temp"></Image>
             </Grid>
         </Viewbox>
     </Grid>

@@ -68,8 +68,6 @@ namespace Инфекция_не_пройдет
             {
                 _userData = new UserData(login, password);
 
-                //List<UserData> userDatas = _informationIO.LoadData();
-
                 string allLogin = "";
 
                 for (int i = 0; i < userDatas.Count; i++)
@@ -91,7 +89,6 @@ namespace Инфекция_не_пройдет
                         {
                             MessageBox.Show("Пароль не должен быть похож на старый");
                             break;
-                            //sadada
                         }
                         else
                         {

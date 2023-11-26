@@ -73,5 +73,31 @@ namespace Инфекция_не_пройдет.Models
                 }
             }
         }
+
+        public void SaveResult(List<int> Groups)
+        {
+            using (StreamWriter sw = new StreamWriter("ResultNumberContact.txt"))
+            {
+                for (int i = 0; i < Groups.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        sw.WriteLine($"В первой группе: {Groups[i]}");
+                    }
+                    if (i == 1)
+                    {
+                        sw.WriteLine($"Во второй группе: {Groups[i]}");
+                    }
+                    if (i == 2)
+                    {
+                        sw.WriteLine($"В третьей группе: {Groups[i]}");
+                    }
+                    if (i == 3)
+                    {
+                        sw.WriteLine($"Количество непрямых контактов: {Groups[i]}");
+                    }
+                }
+            }
+        }
     }
 }

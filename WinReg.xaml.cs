@@ -46,9 +46,9 @@ namespace Инфекция_не_пройдет
 
         private void ButtonReg(object sender, RoutedEventArgs e)
         {
-            string login = tblogin.Text;
+            string login = tblogin.Text.Trim();
 
-            string password = tbPassword.Password;
+            string password = tbPassword.Password.Trim();
 
             _informationIO = new InformationIO(Path);
 

@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -46,8 +47,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="TheInfectionWontGoAway">
-      <HintPath>..\Библиотека\TheInfectionWontGoAway\bin\Debug\TheInfectionWontGoAway.dll</HintPath>
+    <Reference Include="TheInfectionWontGoAway, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\TheInfectionWontGoAway.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -66,6 +68,9 @@
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Pages\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ModelingProcess.xaml.cs">
+      <DependentUpon>ModelingProcess.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NumberContatc.xaml.cs">
       <DependentUpon>NumberContatc.xaml</DependentUpon>
@@ -105,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ModelingProcess.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +178,9 @@
     <Resource Include="Pic\e089aed342a20f2536963561de1323bf — копия.jpeg" />
     <Resource Include="Pic\5671647.png" />
     <Content Include="Pic\helpbutton_85772.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

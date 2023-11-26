@@ -49,7 +49,6 @@ namespace Инфекция_не_пройдет
 
         private void btnComeIn(object sender, RoutedEventArgs e) //Метод для переход на главную форму
         {
-
             if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Text))
             {
                 MessageBox.Show("Введите логин и пароль");

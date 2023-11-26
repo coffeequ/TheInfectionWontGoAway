@@ -49,7 +49,7 @@ namespace Инфекция_не_пройдет.Pages
 
         private void btnModelingProcess(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.MainMenu());
+            NavigationService.Navigate(new Pages.ModelingProcess());
         }
 
         private void btnOneGroup(object sender, RoutedEventArgs e)

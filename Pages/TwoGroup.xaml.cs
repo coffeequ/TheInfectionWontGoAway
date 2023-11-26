@@ -39,7 +39,7 @@ namespace Инфекция_не_пройдет.Pages
             }
             catch 
             {
-                MessageBox.Show("Введите число");
+                MessageBox.Show("Введите корректное число");
                 return;
             }
 

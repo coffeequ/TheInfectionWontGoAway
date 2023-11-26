@@ -40,7 +40,7 @@ namespace Инфекция_не_пройдет.Pages
             }
             catch 
             {
-                MessageBox.Show("Введите число");
+                MessageBox.Show("Введите корректное число");
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace Инфекция_не_пройдет.Pages
 
                     NavigationService.Navigate(new Pages.MainMenu());
                 }
-                MessageBox.Show($"Данные записались. В первой группе {CountThreeGroup} человек");
+                MessageBox.Show($"Данные записались. В третьей группе {CountThreeGroup} человек");
             }
 
         }
