@@ -27,15 +27,11 @@ namespace Инфекция_не_пройдет.Pages
 
         DispatcherTimer timerInfection;
 
-        private const double chanche = 0.50;
-
         int rows;
 
         int columns;
 
         private bool isStopGame = true;
-
-        Random rnd;
 
         private int KletkaSize = 20;
 
@@ -47,38 +43,42 @@ namespace Инфекция_не_пройдет.Pages
         private void BtnStartGame(object sender, RoutedEventArgs e)
         {
             isStopGame = true;
-
             if (!string.IsNullOrEmpty(tbHeight.Text) & !string.IsNullOrEmpty(tbWidth.Text))
             {
+                timerInfection.Stop();
+
                 try
                 {
                     rows = int.Parse(tbHeight.Text);
                     columns = int.Parse(tbWidth.Text);
+
+                    if (columns < 0 || columns > 32)
+                    {
+                        throw new Exception("Количество столбцов должно быть больше 0 или меньше 32");
+                    }
+                    else if (rows < 0 || rows > 32)
+                    {
+                        throw new Exception("Количество строк должно быть больше 0 или меньше 32");
+                    }
+
+                    if (rows % 2 == 0 & rows > 0)
+                    {
+                        throw new Exception("Значение количества строк должно быть нечетным");
+                    }
+                    else if (columns % 2 == 0 & columns > 0)
+                    {
+                        throw new Exception("Зачение количества столбцов должно быть нечетным");
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                     return;
                 }
-
-                if (rows % 2 == 0 || rows == 0 & columns % 2 == 0 || columns == 0)
-                {
-                    MessageBox.Show("Поля должны быть нечетными");
-                    return;
-                }
-
-                if (columns > 0 & columns < 32 & rows > 0 & rows < 32)
-                {
-                    modelingProcessInf = new GamesEngine(columns, rows);
-
-                    timerInfection.Interval = TimeSpan.FromMilliseconds(1000);
-                    timerInfection.Start();
-                    timerInfection.Tick += Timer_Tick;
-                }
-                else
-                {
-                    MessageBox.Show("Введите значения, которые будут больше 0 и меньше 32");
-                }
+                modelingProcessInf = new GamesEngine(columns, rows);
+                timerInfection.Interval = TimeSpan.FromMilliseconds(1000);
+                timerInfection.Start();
+                timerInfection.Tick += Timer_Tick;
             }
             else
             {
@@ -88,6 +88,7 @@ namespace Инфекция_не_пройдет.Pages
 
         private void Timer_Tick(object sender, EventArgs e)
         {
+            modelingProcessInf.NextGeneraionInfection(isStopGame);
             SeeProcess();
         }
 
@@ -97,7 +98,7 @@ namespace Инфекция_не_пройдет.Pages
             NavigationService.Navigate(new Pages.MainMenu());
         }
 
-        public void SeeProcess()
+        private void SeeProcess()
         {
             var Kletkas = modelingProcessInf.GetCurrentGeneration();
 
@@ -105,7 +106,7 @@ namespace Инфекция_не_пройдет.Pages
 
             Rectangle rectangle;
 
-            var conveter = new System.Windows.Media.BrushConverter();
+            var conveter = new BrushConverter();
 
             for (int i = 0; i < columns; i++)
             {
@@ -144,99 +145,6 @@ namespace Инфекция_не_пройдет.Pages
                     canvasGame.Children.Add(rectangle);
                 }
             }
-
-            if (timerInfection.IsEnabled)
-            {
-                NextGeneraionInfection(modelingProcessInf.kletkas);
-            }
-        }
-
-        public async void NextGeneraionInfection(Kletka[,] kletkas)
-        {
-            Kletka[,] NewKletkas = new Kletka[columns, rows];
-
-            int countInfAll = 0;
-
-            for (int i = 0; i < columns; i++)
-            {
-                for (int j = 0; j < rows; j++)
-                {
-                    if (kletkas[i, j].State == KletkaState.Infected)
-                    {
-                        countInfAll++;
-                    }
-                    NewKletkas[i, j] = kletkas[i, j];
-                }
-            }
-
-            for (int x = 0; x < columns; x++)
-            {
-                for (int y = 0; y < rows; y++)
-                {
-                    int CountNeighboursInfection = CountsNeighboursInfection(x, y, kletkas);
-
-                    Kletka hasKletka = kletkas[x, y];
-
-                    if (isStopGame & hasKletka.State == KletkaState.Helthy && (CountNeighboursInfection >= 1 || 3 <= CountNeighboursInfection))
-                    {
-                        await Task.Delay(200);
-                        NewKletkas[x, y].InfectionUpdate();
-                    }
-                    else if (hasKletka.State == KletkaState.Infected)
-                    {
-                        NewKletkas[x, y].SwapStatusInfectionToImmune();
-                    }
-
-                    else if (hasKletka.State == KletkaState.Immune)
-                    {
-                        NewKletkas[x, y].SwapStatusImmuneToHealthy();
-                    }
-                }
-            }
-
-            kletkas = NewKletkas;
-        }
-
-        private int CountsNeighboursInfection(int x, int y, Kletka[,] kletkas)
-        {
-            int count = 0;
-
-            rnd = new Random();
-
-            double rndValue;
-
-            for (int i = -1; i < 2; i++)
-            {
-                for (int j = -1; j < 2; j++)
-                {
-                    double temp = rnd.Next(48, 51);
-
-                    rndValue = temp * 0.01;
-
-                    if (chanche == rndValue)
-                    {
-                        int column = (x + i + columns) % columns;
-
-                        int row = (y + j + rows) % rows;
-
-                        bool isSelfChecking = column == x & row == y;
-
-                        var hasKletka = new Kletka();
-
-                        hasKletka = kletkas[column, row];
-
-                        if (hasKletka.State == KletkaState.Infected & !isSelfChecking)
-                        {
-                            count++;
-                        }
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
-            }
-            return count;
         }
 
         private void BtnStopGame(object sender, RoutedEventArgs e)

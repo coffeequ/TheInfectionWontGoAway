@@ -44,7 +44,7 @@
                 <Label Grid.Row="1" Grid.Column="1" FontSize="24" VerticalContentAlignment="Center"  HorizontalContentAlignment="Left" FontFamily="Calibri">Вход</Label>
                 <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="0 0 0 20">
                     <TextBox Background="#27B1EC" Foreground="White" Focusable="False" Grid.Row="2" Grid.Column="0" Padding="15 0 0 0" Margin="10 0 0 0" Width="150" FontSize="25" VerticalContentAlignment="Center" HorizontalAlignment="Right" BorderBrush="Black" IsReadOnly="True"  Height="60" HorizontalContentAlignment="Left" >Логин</TextBox>
-                    <TextBox Background="#27B1EC" Foreground="White" Grid.Row="2" Width="300" Grid.Column="1"  Height="60" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin"></TextBox>
+                    <TextBox Background="#27B1EC" Foreground="White" Grid.Row="2" Width="300" Grid.Column="1"  Height="60" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbLogin" ></TextBox>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
                     <TextBox  Background="#27B1EC" Foreground="White" Focusable="False" Margin="10 0 0 0" Padding="15 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="150" BorderBrush="Black" IsReadOnly="True"  Height="60" Grid.Row="3" Grid.Column="0" FontSize="25">Пароль</TextBox>

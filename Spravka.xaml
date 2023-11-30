@@ -23,6 +23,7 @@
             <Label FontSize="18">Студент группы ПР-330/б</Label>
             <Label FontSize="18">Версия программы 1.0.</Label>
             <TextBlock Margin="5 0 0 0" TextWrapping="Wrap" FontSize="18">Проект выполнен в рамках курсового проектирования по МДК 02.01 «Технология разработки программного обеспечения».</TextBlock>
+            <TextBlock Margin="5 0 0 0" TextWrapping="Wrap" FontSize="18">Связь с разработчиком: vk.com/coffequ.</TextBlock>
             <Label FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Left">О программе:</Label>
             <TextBlock Margin="5" TextWrapping="Wrap" FontSize="18" TextAlignment="Justify">
                 Программа проводит калькуляцию данных о людях, которые имели непрямой контакт с заболевшими и выводит их количество.

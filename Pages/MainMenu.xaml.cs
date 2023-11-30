@@ -27,11 +27,6 @@ namespace Инфекция_не_пройдет.Pages
 
         private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
 
-        private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void btnTwoGroup(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Pages.TwoGroup());

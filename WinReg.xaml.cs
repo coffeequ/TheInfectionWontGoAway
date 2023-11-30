@@ -85,26 +85,7 @@ namespace Инфекция_не_пройдет
                     new MainWindow().Show();
                     Close();
                 }
-
-                //for (int i = 0; i < userDatas.Count; i++)
-                //{
-                //    if (userDatas[i].UserLogin == _userData.UserLogin)
-                //    {
-                //        MessageBox.Show("Логин занят другим пользователем. Пожалуйства введите другой логин");
-                //        break;
-                //    }
-                //    else
-                //    {
-                //        userDatas.Add(_userData);
-                //        MessageBox.Show("Успешная регистрация");
-                //        _informationIO.SaveData(userDatas);
-                //        new MainWindow().Show();
-                //        Close();
-                //    }
-                //}
-
             }
-
         }
     }
 }
