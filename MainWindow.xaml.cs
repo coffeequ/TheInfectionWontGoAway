@@ -41,16 +41,15 @@ namespace Инфекция_не_пройдет
             InitializeComponent();
         }
 
-        private void btnReg(object sender, RoutedEventArgs e) //Метод для переход в форму для регистрации
+        private void btnReg(object sender, RoutedEventArgs e)
         {
             new WinReg().Show();
             Close();
         }
 
-        private void btnComeIn(object sender, RoutedEventArgs e) //Метод для переход на главную форму
+        private void btnComeIn(object sender, RoutedEventArgs e)
         {
-
-            if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Text))
+            if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Password))
             {
                 MessageBox.Show("Введите логин и пароль");
             }
@@ -58,7 +57,7 @@ namespace Инфекция_не_пройдет
             {
                 MessageBox.Show("Введите логин");
             }
-            else if (string.IsNullOrEmpty(tbPassword.Text))
+            else if (string.IsNullOrEmpty(tbPassword.Password))
             {
                 MessageBox.Show("Введите пароль");
             }
@@ -80,11 +79,9 @@ namespace Инфекция_не_пройдет
 
                 string login = tbLogin.Text.Replace(" ", "");
 
-                string password = tbPassword.Text.Replace(" ", "");
+                string password = tbPassword.Password.Replace(" ", "");
 
                 _userData = new UserData(login, password);
-
-                //bool isUserExists = false;
 
                 for (int i = 0; i < _userDatas.Count; i++)
                 {
@@ -92,7 +89,6 @@ namespace Инфекция_не_пройдет
                     {
                         new MainMenuWin().Show();
                         Close();
-                        //isUserExists = true;
                     }
 
                     if (_userDatas[i].UserLogin == _userData.UserLogin && _userDatas[i].UserPassword != password)
@@ -122,13 +118,6 @@ namespace Инфекция_не_пройдет
                 {
                     MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
                 }
-
-                //bool temp = Regex.IsMatch(InfoUsers, patternUserLogin);
-
-                //if (!Regex.IsMatch(InfoUsers, patternUserLogin))
-                //{
-                //    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} не существует");
-                //}
             }
         }
 
@@ -137,5 +126,6 @@ namespace Инфекция_не_пройдет
             new WinPasswordRecovery().Show();
             Close();
         }
+
     }
 }

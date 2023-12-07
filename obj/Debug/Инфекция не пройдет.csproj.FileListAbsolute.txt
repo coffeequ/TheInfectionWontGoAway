@@ -1,7 +1,6 @@
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.exe.config
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.exe
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.pdb
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.AssemblyReference.cache
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\MainWindow.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\App.g.cs
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет_MarkupCompile.cache
@@ -36,3 +35,46 @@ C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.pdb
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.CopyComplete
 C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.dll
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\ModelingProcess.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Pages\ModelingProcess.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Project\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.AssemblyReference.cache
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.exe.config
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.exe
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\bin\Debug\Инфекция не пройдет.pdb
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.dll
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\bin\Debug\TheInfectionWontGoAway.pdb
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\MainMenuWin.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\MainWindow.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\MainMenu.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\ModelingProcess.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\NumberContatc.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\OneGroup.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\ThreeGroup.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\TwoGroup.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Spravka.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\WinPasswordRecovery.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\WinReg.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\App.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет_Content.g.cs
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет_MarkupCompile.cache
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет_MarkupCompile.lref
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\App.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\MainMenuWin.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\MainWindow.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\MainMenu.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\ModelingProcess.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\NumberContatc.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\OneGroup.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\ThreeGroup.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Pages\TwoGroup.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Spravka.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\WinPasswordRecovery.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\WinReg.baml
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.g.resources
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция_не_пройдет.Properties.Resources.resources
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.GenerateResource.cache
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.CoreCompileInputs.cache
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.CopyComplete
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.exe
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.pdb
+C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\obj\Debug\Инфекция не пройдет.csproj.AssemblyReference.cache

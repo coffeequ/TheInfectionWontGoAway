@@ -22,9 +22,14 @@ namespace Инфекция_не_пройдет
         public MainMenuWin()
         {
             InitializeComponent();
-            
+            Pages.MainMenu.closewin += MainMenu_closewin;
             MyFrame.NavigationService.Navigate(new Pages.MainMenu());
+        }
 
+        private void MainMenu_closewin()
+        {
+            new MainWindow().Show();
+            Close();
         }
 
         public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)

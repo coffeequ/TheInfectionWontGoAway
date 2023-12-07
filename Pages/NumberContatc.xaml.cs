@@ -75,7 +75,13 @@ namespace Инфекция_не_пройдет.Pages
 
             NumberOfIndirectСontacts numberOfIndirectСontacts = new NumberOfIndirectСontacts();
 
-            lbCountContact.Content = numberOfIndirectСontacts.CountContacts(Groups[0], Groups[1], Groups[2]);
+            int countContacts = numberOfIndirectСontacts.CountContacts(Groups[0], Groups[1], Groups[2]);
+
+            lbCountContact.Content = countContacts;
+
+            Groups.Add(countContacts);
+
+            informationGroup.SaveResult(Groups);
         }
     }
 }

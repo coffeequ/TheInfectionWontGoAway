@@ -46,9 +46,9 @@ namespace Инфекция_не_пройдет
 
         private void ButtonReg(object sender, RoutedEventArgs e)
         {
-            string login = tblogin.Text;
+            string login = tblogin.Text.Trim();
 
-            string password = tbPassword.Password;
+            string password = tbPassword.Password.Trim();
 
             _informationIO = new InformationIO(Path);
 
@@ -75,7 +75,7 @@ namespace Инфекция_не_пройдет
 
                 if (Regex.IsMatch(InfoUsers, _userData.UserLogin))
                 {
-                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} уже существует, пожалуйста придумайте новый логин");
+                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} уже существует");
                 }
                 else
                 {
@@ -85,26 +85,7 @@ namespace Инфекция_не_пройдет
                     new MainWindow().Show();
                     Close();
                 }
-
-                //for (int i = 0; i < userDatas.Count; i++)
-                //{
-                //    if (userDatas[i].UserLogin == _userData.UserLogin)
-                //    {
-                //        MessageBox.Show("Логин занят другим пользователем. Пожалуйства введите другой логин");
-                //        break;
-                //    }
-                //    else
-                //    {
-                //        userDatas.Add(_userData);
-                //        MessageBox.Show("Успешная регистрация");
-                //        _informationIO.SaveData(userDatas);
-                //        new MainWindow().Show();
-                //        Close();
-                //    }
-                //}
-
             }
-
         }
     }
 }

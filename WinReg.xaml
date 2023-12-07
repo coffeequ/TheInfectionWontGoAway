@@ -33,11 +33,23 @@
                 <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <TextBox Padding="5 0 0 0" Background="#27B1EC" Foreground="White" Height="60" Width="230" Focusable="False" FontSize="25" VerticalContentAlignment="Center" BorderBrush="Black" IsReadOnly="True" >Введите ваш логин</TextBox>
-                        <TextBox Grid.Row="2" Background="#27B1EC" Foreground="White" Grid.Column="2" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" x:Name="tblogin" Width="300" ></TextBox>
+                        <TextBox Grid.Row="2" Background="#27B1EC" Foreground="White" Grid.Column="2" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" x:Name="tblogin" Width="300" >
+                            <TextBox.ToolTip>
+                                <ToolTip>
+                                    <Label>Поле для регистрации логина от аккаунта</Label>
+                                </ToolTip>
+                            </TextBox.ToolTip>
+                        </TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="10">
                         <TextBox Padding="5 0 0 0" Background="#27B1EC" Foreground="White" Height="60" Width="230" Grid.Row="2" FontSize="25" VerticalContentAlignment="Center" BorderBrush="Black" IsReadOnly="True" Focusable="False" Grid.ColumnSpan="2" >Пароль</TextBox>
-                        <PasswordBox Width="300" Background="#27B1EC" Foreground="White" Grid.Row="2" Grid.Column="2" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" x:Name="tbPassword" ></PasswordBox>
+                        <PasswordBox Width="300" Background="#27B1EC" Foreground="White" Grid.Row="2" Grid.Column="2" BorderBrush="Black" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" x:Name="tbPassword">
+                            <PasswordBox.ToolTip>
+                                <ToolTip>
+                                    <Label>Поле для регистрации пароля от аккаунта</Label>
+                                </ToolTip>
+                            </PasswordBox.ToolTip>
+                        </PasswordBox>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Grid.Column="1">

@@ -40,13 +40,13 @@ namespace Инфекция_не_пройдет.Pages
             }
             catch 
             {
-                MessageBox.Show("Введите число");
+                MessageBox.Show("Введите корректное число");
                 return;
             }
 
             informationGroup = new InformationGroup(Path);
 
-            if (CountThreeGroup == 0)
+            if (CountThreeGroup < 0 || CountThreeGroup == 0)
             {
                 MessageBox.Show("Введите число больше 0");
             }
@@ -62,7 +62,7 @@ namespace Инфекция_не_пройдет.Pages
 
                     NavigationService.Navigate(new Pages.MainMenu());
                 }
-                MessageBox.Show($"Данные записались. В первой группе {CountThreeGroup} человек");
+                MessageBox.Show($"Данные записались. В третьей группе {CountThreeGroup} человек");
             }
 
         }

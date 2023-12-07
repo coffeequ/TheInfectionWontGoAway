@@ -25,12 +25,11 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
-        private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
+        public delegate void CloseWin();
 
-        private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        public static event CloseWin closewin;
+
+        private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
 
         private void btnTwoGroup(object sender, RoutedEventArgs e)
         {
@@ -49,7 +48,7 @@ namespace Инфекция_не_пройдет.Pages
 
         private void btnModelingProcess(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Pages.MainMenu());
+            NavigationService.Navigate(new Pages.ModelingProcess());
         }
 
         private void btnOneGroup(object sender, RoutedEventArgs e)
@@ -67,6 +66,11 @@ namespace Инфекция_не_пройдет.Pages
         private void btnSpravka(object sender, RoutedEventArgs e)
         {
             new Spravka().Show();
+        }
+
+        private void btnExit(object sender, RoutedEventArgs e)
+        {
+            closewin();
         }
     }
 }
