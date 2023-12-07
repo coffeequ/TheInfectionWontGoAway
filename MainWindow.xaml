@@ -48,7 +48,7 @@
                 </StackPanel>
                 <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
                     <TextBox  Background="#27B1EC" Foreground="White" Focusable="False" Margin="10 0 0 0" Padding="15 0 0 0" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="150" BorderBrush="Black" IsReadOnly="True"  Height="60" Grid.Row="3" Grid.Column="0" FontSize="25">Пароль</TextBox>
-                    <TextBox  Background="#27B1EC" Foreground="White" Grid.Row="3" Grid.Column="1"  Height="60" Width="300" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbPassword"></TextBox>
+                    <PasswordBox  Background="#27B1EC" Foreground="White" Grid.Row="3" Grid.Column="1"  Height="60" Width="300" HorizontalAlignment="Left" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" x:Name="tbPassword"></PasswordBox>
                 </StackPanel>
                 <Button BorderBrush="White" Background="White" BorderThickness="0" Grid.Row="6" Grid.Column="1" Height="40" VerticalAlignment="Top" Width="200" FontSize="25" Click="btnWinPasswordRecovery">
                     <Run Foreground="#699BF7">Забыли пароль?</Run>

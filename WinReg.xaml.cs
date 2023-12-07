@@ -75,7 +75,7 @@ namespace Инфекция_не_пройдет
 
                 if (Regex.IsMatch(InfoUsers, _userData.UserLogin))
                 {
-                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} уже существует, пожалуйста придумайте новый логин");
+                    MessageBox.Show($"Пользователя с логином {_userData.UserLogin} уже существует");
                 }
                 else
                 {

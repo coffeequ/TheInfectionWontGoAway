@@ -46,7 +46,7 @@ namespace Инфекция_не_пройдет.Pages
 
             informationGroup = new InformationGroup(Path);
 
-            if (CountThreeGroup > 0)
+            if (CountThreeGroup < 0 || CountThreeGroup == 0)
             {
                 MessageBox.Show("Введите число больше 0");
             }

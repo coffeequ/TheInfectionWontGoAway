@@ -25,6 +25,10 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        public delegate void CloseWin();
+
+        public static event CloseWin closewin;
+
         private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
 
         private void btnTwoGroup(object sender, RoutedEventArgs e)
@@ -62,6 +66,11 @@ namespace Инфекция_не_пройдет.Pages
         private void btnSpravka(object sender, RoutedEventArgs e)
         {
             new Spravka().Show();
+        }
+
+        private void btnExit(object sender, RoutedEventArgs e)
+        {
+            closewin();
         }
     }
 }

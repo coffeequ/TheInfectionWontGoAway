@@ -31,7 +31,7 @@ namespace Инфекция_не_пройдет.Pages
 
         int columns;
 
-        private bool isStopGame = true;
+        private bool isStopGame = false;
 
         private int KletkaSize = 20;
 
@@ -42,33 +42,33 @@ namespace Инфекция_не_пройдет.Pages
 
         private void BtnStartGame(object sender, RoutedEventArgs e)
         {
-            isStopGame = true;
+            isStopGame = false;
             if (!string.IsNullOrEmpty(tbHeight.Text) & !string.IsNullOrEmpty(tbWidth.Text))
             {
                 timerInfection.Stop();
-
                 try
                 {
                     rows = int.Parse(tbHeight.Text);
                     columns = int.Parse(tbWidth.Text);
 
-                    if (columns < 0 || columns > 32)
+                    if (columns <= 0 || columns > 32)
                     {
                         throw new Exception("Количество столбцов должно быть больше 0 или меньше 32");
                     }
-                    else if (rows < 0 || rows > 32)
+                    else if (rows <= 0 || rows > 32)
                     {
                         throw new Exception("Количество строк должно быть больше 0 или меньше 32");
                     }
 
-                    if (rows % 2 == 0 & rows > 0)
+                    if (rows % 2 == 0 && rows >= 0)
                     {
                         throw new Exception("Значение количества строк должно быть нечетным");
                     }
-                    else if (columns % 2 == 0 & columns > 0)
+                    else if (columns % 2 == 0 & columns >= 0)
                     {
                         throw new Exception("Зачение количества столбцов должно быть нечетным");
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -79,6 +79,8 @@ namespace Инфекция_не_пройдет.Pages
                 timerInfection.Interval = TimeSpan.FromMilliseconds(1000);
                 timerInfection.Start();
                 timerInfection.Tick += Timer_Tick;
+                NameBtnStartGame.IsEnabled = false;
+                NameBtnStopGame.IsEnabled = true;  
             }
             else
             {
@@ -88,7 +90,7 @@ namespace Инфекция_не_пройдет.Pages
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            modelingProcessInf.NextGeneraionInfection(isStopGame);
+            modelingProcessInf.AsyncNextGeneraionInfection(isStopGame);
             SeeProcess();
         }
 
@@ -149,12 +151,15 @@ namespace Инфекция_не_пройдет.Pages
 
         private void BtnStopGame(object sender, RoutedEventArgs e)
         {
-            isStopGame = false;
+            isStopGame = true;
+            NameBtnStartGame.IsEnabled = true;
+            NameBtnStopGame.IsEnabled = false;
         }
 
         private void gridLoaded(object sender, RoutedEventArgs e)
         {
             timerInfection = new DispatcherTimer();
+            NameBtnStopGame.IsEnabled = false;
         }
     }
 }

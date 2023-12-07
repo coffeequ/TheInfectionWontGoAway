@@ -49,7 +49,7 @@ namespace Инфекция_не_пройдет
 
         private void btnComeIn(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Text))
+            if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Password))
             {
                 MessageBox.Show("Введите логин и пароль");
             }
@@ -57,7 +57,7 @@ namespace Инфекция_не_пройдет
             {
                 MessageBox.Show("Введите логин");
             }
-            else if (string.IsNullOrEmpty(tbPassword.Text))
+            else if (string.IsNullOrEmpty(tbPassword.Password))
             {
                 MessageBox.Show("Введите пароль");
             }
@@ -79,7 +79,7 @@ namespace Инфекция_не_пройдет
 
                 string login = tbLogin.Text.Replace(" ", "");
 
-                string password = tbPassword.Text.Replace(" ", "");
+                string password = tbPassword.Password.Replace(" ", "");
 
                 _userData = new UserData(login, password);
 
