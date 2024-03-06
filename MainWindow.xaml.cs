@@ -22,18 +22,27 @@ namespace Инфекция_не_пройдет
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Метод для вызова справки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
         {
             Spravka MySpravka = new Spravka();
             MySpravka.Show();
         }
 
+        // Поле с информацией о пользоветеле
         private UserData _userData;
 
+        // Поле для сохранения и выгрузки информации из файла
         private InformationIO _informationIO;
 
+        // Поле путь, указывающие где находится файл с пользотвательской информацией
         private readonly string Path = $"{Environment.CurrentDirectory}\\UserData.txt";
 
+        // Лист с данными пользователей
         private List<UserData> _userDatas;
 
         public MainWindow()
@@ -41,12 +50,21 @@ namespace Инфекция_не_пройдет
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод для вызова окна регистрации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReg(object sender, RoutedEventArgs e)
         {
             new WinReg().Show();
             Close();
         }
-
+        /// <summary>
+        /// Метод для входа в приложение
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnComeIn(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(tbLogin.Text) & string.IsNullOrEmpty(tbPassword.Password))
@@ -121,7 +139,12 @@ namespace Инфекция_не_пройдет
             }
         }
 
-        private void btnWinPasswordRecovery(object sender, RoutedEventArgs e) // Метод для восстановления пароля
+        /// <summary>
+        /// Метод для восстановления пароля от аккаунта
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnWinPasswordRecovery(object sender, RoutedEventArgs e)
         {
             new WinPasswordRecovery().Show();
             Close();

@@ -27,10 +27,13 @@ namespace Инфекция_не_пройдет
             MySpravka.Show();
         }
 
+        // Поле с информацией о пользоветеле
         private UserData _userData;
 
+        // Поле для сохранения и выгрузки информации из файла
         private InformationIO _informationIO;
 
+        // Поле путь, указывающие где находится файл с пользотвательской информацией
         private readonly string Path = $"{Environment.CurrentDirectory}\\UserData.txt";
 
         public WinPasswordRecovery()
@@ -38,12 +41,22 @@ namespace Инфекция_не_пройдет
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод для выхода из окна восстановления пароля
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             Close();
         }
 
+        /// <summary>
+        /// Метод для восстановление пароля
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonSwitchPassword(object sender, RoutedEventArgs e)
         {
             string login = tblogin.Text;

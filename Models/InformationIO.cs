@@ -13,6 +13,7 @@ namespace Инфекция_не_пройдет.Models
     /// </summary>
     class InformationIO
     {
+        // Поле для указания местонахождения файла
         private readonly string Path;
 
         public InformationIO(string Path)
@@ -96,73 +97,5 @@ namespace Инфекция_не_пройдет.Models
                 }
             }
         }
-
-        //public List<int> LoadDataGroup(string Path)
-        //{
-        //    bool fileExist = File.Exists(Path);
-
-        //    int[] MyArray = new int[10];
-        //    MyArray.Distinct
-
-        //    using (StreamReader sr = new StreamReader(Path))
-        //    {
-        //        byte CountGroup = 3;
-
-        //        List<int> Groups = new List<int>();
-
-        //        for (int i = 0; i < CountGroup; i++)
-        //        {
-        //            Groups.Add(Convert.ToInt32(sr.ReadLine()));
-        //        }
-
-        //        return Groups;
-        //    }
-        //}
-
-        ///// <summary>
-        ///// Метод для сохрнанения информации об количествах людей в соотвествующих группах
-        ///// </summary>
-        ///// <param name="CountOneGroup"></param>
-        ///// <param name="CountTwoGroup"></param>
-        ///// <param name="CountThreeGroup"></param>
-        //public void SaveDataGroup(int CountOneGroup, int CountTwoGroup, int CountThreeGroup, string Path)
-        //{
-        //    List<int> CountMenGroup = LoadDataGroup(Path);
-            
-        //    CountMenGroup = new List<int>();
-
-        //    for (int i = 0; i < CountMenGroup.Count; i++)
-        //    {
-        //        if (i == 0)
-        //        {
-        //            if (CountMenGroup[i] == 0)
-        //            {
-        //                CountMenGroup[i] = CountOneGroup;
-        //            }
-        //        }
-        //        if (i == 1)
-        //        {
-        //            if (CountMenGroup[i] == 0)
-        //            {
-        //                CountMenGroup[i] = CountTwoGroup;
-        //            }
-        //        }
-        //        if (i == 2)
-        //        {
-        //            if (CountMenGroup[i] == 0)
-        //            {
-        //                CountMenGroup[i] = CountThreeGroup;
-        //            }
-        //        }
-        //    }
-
-        //    using (StreamWriter sw = new StreamWriter(Path))
-        //    {
-        //        for (int i = 0; i < CountMenGroup.Count; i++)
-        //        {
-        //            sw.WriteLine(CountMenGroup[i]);
-        //        }
-        //    }
-        //}
     }
 }

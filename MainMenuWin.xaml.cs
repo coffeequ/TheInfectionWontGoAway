@@ -26,12 +26,20 @@ namespace Инфекция_не_пройдет
             MyFrame.NavigationService.Navigate(new Pages.MainMenu());
         }
 
+        /// <summary>
+        /// Метод для перехода на окно с авторизацией пользователя
+        /// </summary>
         private void MainMenu_closewin()
         {
             new MainWindow().Show();
             Close();
         }
 
+        /// <summary>
+        /// Метод для вызова справки
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void F1Shortcut1(object sender, ExecutedRoutedEventArgs e)
         {
             Spravka MySpravka = new Spravka();

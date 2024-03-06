@@ -21,10 +21,16 @@ namespace Инфекция_не_пройдет.Models
             this.UserPassword = UserPassword;
         }
 
+        // Поле логин пользователя
         public string UserLogin { get; set; }
 
+        //Поле пароль пользователя
         public string UserPassword { get; set; }
 
+        /// <summary>
+        /// Метод для вывода информации о пользователе
+        /// </summary>
+        /// <returns></returns>
         public string ConclisionInf()
         {
             return $"Login: {UserLogin}, password: {UserPassword}";

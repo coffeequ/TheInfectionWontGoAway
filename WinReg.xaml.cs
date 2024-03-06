@@ -27,23 +27,34 @@ namespace Инфекция_не_пройдет
             MySpravka.Show();
         }
 
+        // Поле с информацией о пользоветеле
         private Models.UserData _userData;
 
+        // Поле для сохранения и выгрузки информации из файла
         private InformationIO _informationIO;
 
+        // Поле путь, указывающие где находится файл с пользотвательской информацией
         private readonly string Path = $"{Environment.CurrentDirectory}\\UserData.txt";
 
         public WinReg()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Метод для выхода из окна регистрации
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             Close();
         }
-
+        /// <summary>
+        /// Метод регистрации пользователя
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonReg(object sender, RoutedEventArgs e)
         {
             string login = tblogin.Text.Trim();

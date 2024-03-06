@@ -13,19 +13,32 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Инфекция_не_пройдет.Models;
-using TheInfectionWontGoAway;
+using Epidemiology;
 
 namespace Инфекция_не_пройдет.Pages
 {
+    //**********************************************************************************************************************
+    //* Название программы: "Библиотека "Эпидемиология""                                                                   *
+    //*                                                                                                                    *
+    //* Назначение программы: Бибилиотека предназначена для калькуляции непрямых контактов между первой и третьей группой  *
+    //*                                                                                                                    *
+    //* Разработчик: студент группы ПР-330/б Пугач С.Е.                                                                    *
+    //*                                                                                                                    *
+    //* Версия: 1.0                                                                                                        *
+    //**********************************************************************************************************************
+
     /// <summary>
     /// Логика взаимодействия для NumberContatc.xaml
     /// </summary>
     public partial class NumberContatc : Page
     {
+        // Поле для выгрузки и загрузки информации из файла с группами
         private InformationGroup informationGroup;
 
+        // Поле путь указывающие где находится файл с информацией о группах людей
         private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
 
+        // Поле лист со всеми группами
         List<int> Groups;
 
         public NumberContatc()
@@ -33,6 +46,11 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод для вывода информации о группах 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadedGrid(object sender, RoutedEventArgs e)
         {
             informationGroup = new InformationGroup(Path);
@@ -54,11 +72,21 @@ namespace Инфекция_не_пройдет.Pages
             lbThreeGroup.Content = Groups[2];
         }
 
+        /// <summary>
+        /// Метод возврата назад в меню
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbClose(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Pages.MainMenu());
         }
 
+        /// <summary>
+        /// Метод для вывода количества непрямых контактов
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clCount(object sender, RoutedEventArgs e)
         {
             informationGroup = new InformationGroup(Path);

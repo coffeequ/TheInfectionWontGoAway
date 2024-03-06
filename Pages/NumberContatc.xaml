@@ -27,8 +27,20 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="3" Grid.RowSpan="3" Margin="0,93.2,0.2,-9.2" >
-                <Button Grid.Row="5" Margin="0 60 0 0" Width="250" Height="70" FontSize="28" Foreground="white" Background="#27B1EC" Click="clCount">Узнать количество</Button>
-                <Button Grid.Row="5" Width="180" Height="60" FontSize="28" Foreground="white" Margin="5" Background="#8B8B8B" Click="tbClose">Назад</Button>
+                <Button Grid.Row="5" Margin="0 60 0 0" Width="250" Height="70" FontSize="28" Foreground="white" Background="#27B1EC" Click="clCount">Узнать количество
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <Label>Кнопка для расчета количества непрямых контактов</Label>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+                <Button Grid.Row="5" Width="180" Height="60" FontSize="28" Foreground="white" Margin="5" Background="#8B8B8B" Click="tbClose">Назад
+                    <Button.ToolTip>
+                        <ToolTip>
+                            <Label>Кнопка для возврата в меню</Label>
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
             </StackPanel>
             <TextBlock FontWeight="Medium" Grid.RowSpan="2" TextWrapping="Wrap" Margin="0,0,20.2,0" TextAlignment="Center" FontSize="28">Количество непрямых контактов</TextBlock>
 

@@ -26,10 +26,17 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        // Поле для выгрузки и загрузки информации из файла с группами
         private InformationGroup informationGroup;
 
+        //Поле путь указывающие где находится файл с информацией о группах людей
         private readonly string Path = $"{Environment.CurrentDirectory}\\Groups.txt";
 
+        /// <summary>
+        /// Метод для записи количества людей во второй группе
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbCreateInfectDeases(object sender, RoutedEventArgs e)
         {
             int CountTwoGroup = 0;
@@ -67,6 +74,11 @@ namespace Инфекция_не_пройдет.Pages
 
         }
 
+        /// <summary>
+        /// Метод для возврата назад в меню
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbClose(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Pages.MainMenu());

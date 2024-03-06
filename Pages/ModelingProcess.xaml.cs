@@ -14,25 +14,41 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using TheInfectionWontGoAway;
+using Epidemiology;
 
 namespace Инфекция_не_пройдет.Pages
 {
+    //***********************************************************************************************
+    //* Название программы: "Библиотека "Эпидемиология""                                            *
+    //*                                                                                             *
+    //* Назначение программы: Бибилиотека предназначена для моделирования процесса распространения. *
+    //*                                                                                             *
+    //* Разработчик: студент группы ПР-330/б Пугач С.Е.                                             *
+    //*                                                                                             *
+    //* Версия: 1.0                                                                                 *
+    //***********************************************************************************************
+
     /// <summary>
     /// Логика взаимодействия для ModelingProcess.xaml
     /// </summary>
     public partial class ModelingProcess : Page
     {
+        // Класс для моделирования процесса распространения
         GamesEngine modelingProcessInf;
 
+        // Класс для таймера
         DispatcherTimer timerInfection;
 
+        // Количество строк
         int rows;
 
+        // Количество столбцов
         int columns;
 
+        // Запущена ли игра
         private bool isStopGame = false;
 
+        // Размер клетки
         private int KletkaSize = 20;
 
         public ModelingProcess()
@@ -40,6 +56,7 @@ namespace Инфекция_не_пройдет.Pages
             InitializeComponent();
         }
 
+        //Метод для старта моделирования процесса распространения
         private void BtnStartGame(object sender, RoutedEventArgs e)
         {
             isStopGame = false;
@@ -51,11 +68,11 @@ namespace Инфекция_не_пройдет.Pages
                     rows = int.Parse(tbHeight.Text);
                     columns = int.Parse(tbWidth.Text);
 
-                    if (columns <= 0 || columns > 32)
+                    if (columns <= 0 || columns >= 32)
                     {
                         throw new Exception("Количество столбцов должно быть больше 0 или меньше 32");
                     }
-                    else if (rows <= 0 || rows > 32)
+                    else if (rows <= 0 || rows >= 32)
                     {
                         throw new Exception("Количество строк должно быть больше 0 или меньше 32");
                     }
@@ -88,18 +105,21 @@ namespace Инфекция_не_пройдет.Pages
             }
         }
 
+        //Метод таймера для визуализации процесса распространения
         private void Timer_Tick(object sender, EventArgs e)
         {
             modelingProcessInf.AsyncNextGeneraionInfection(isStopGame);
             SeeProcess();
         }
 
+        //Метод для возврата назад в меню
         private void tbClose(object sender, RoutedEventArgs e)
         {
             timerInfection.Stop();
             NavigationService.Navigate(new Pages.MainMenu());
         }
 
+        //Метод для визуализации клеток
         private void SeeProcess()
         {
             var Kletkas = modelingProcessInf.GetCurrentGeneration();
@@ -149,6 +169,7 @@ namespace Инфекция_не_пройдет.Pages
             }
         }
 
+        //Метод для остановки распространения
         private void BtnStopGame(object sender, RoutedEventArgs e)
         {
             isStopGame = true;
@@ -156,6 +177,7 @@ namespace Инфекция_не_пройдет.Pages
             NameBtnStopGame.IsEnabled = false;
         }
 
+        //Метод для выделения памяти под таймер и выключение кнопки "Остановить процесс"
         private void gridLoaded(object sender, RoutedEventArgs e)
         {
             timerInfection = new DispatcherTimer();

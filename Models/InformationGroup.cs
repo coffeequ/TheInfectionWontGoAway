@@ -9,13 +9,16 @@ namespace Инфекция_не_пройдет.Models
 {
     class InformationGroup
     {
+        // Поле для указания пути к файлу
         private readonly string Path;
 
         public InformationGroup(string Path)
         {
             this.Path = Path;
         }
-
+        /// <summary>
+        /// Метод для создания групп людей
+        /// </summary>
         public void CreateFileGroup()
         {
             if (!File.Exists(Path))
@@ -31,6 +34,10 @@ namespace Инфекция_не_пройдет.Models
             }
         }
 
+        /// <summary>
+        /// Метод для загрузки информации о группах
+        /// </summary>
+        /// <returns></returns>
         public List<int> LoadGroup()
         {
             List<int> ListGroup = new List<int>();
@@ -45,6 +52,11 @@ namespace Инфекция_не_пройдет.Models
             return ListGroup;
         }
 
+        /// <summary>
+        /// Метод для сохранения информации об определнной группе людей
+        /// </summary>
+        /// <param name="ValueForSave"></param>
+        /// <param name="Position"></param>
         public void SaveGroup(int ValueForSave, int Position)
         {
             int[] CountMenGroups = new int[3];
@@ -74,6 +86,10 @@ namespace Инфекция_не_пройдет.Models
             }
         }
 
+        /// <summary>
+        /// Метод для сохранения массива групп
+        /// </summary>
+        /// <param name="Groups"></param>
         public void SaveResult(List<int> Groups)
         {
             using (StreamWriter sw = new StreamWriter("ResultNumberContact.txt"))
