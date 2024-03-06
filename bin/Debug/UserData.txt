@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 Login: asd3, password: 123
-Login: rodionova, password: margo
-Login: Coffeequ, password: Pugach1101
 Login: Gegas, password: D!152174
 Login: savva, password: 123
 Login: фыв3, password: 3
 Login: Лягуш, password: 8951
 Login: бакукичпердасмолов, password: 123
-Login: 1, password: 11
-=======
-
->>>>>>> 969e3d8bbf6d45404d166753f98ab669aa3ea886
+Login: 123, password: 123
+Login: 1234, password: 123
