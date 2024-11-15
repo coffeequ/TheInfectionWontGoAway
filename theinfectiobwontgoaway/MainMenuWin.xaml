@@ -1,0 +1,34 @@
+﻿<Window x:Class="Инфекция_не_пройдет.MainMenuWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Инфекция_не_пройдет"
+        mc:Ignorable="d"
+        Title="Инфекция не пройдёт" Height="500" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" MaxWidth="1920" MinWidth="900" MaxHeight="1080" MinHeight="500" Icon="/Pic/Logo.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <RoutedUICommand x:Key="f1" Text="Another Text"/>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource f1}"/>
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource f1}" Executed="F1Shortcut1"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="145*"></ColumnDefinition>
+            <ColumnDefinition Width="578*"></ColumnDefinition>
+            <ColumnDefinition Width="145*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Margin="0 0 10 0"  Grid.Column="2" Source="/Pic/e089aed342a20f2536963561de1323bf — копия.jpeg" />
+        <Image Margin="10 0 0 0" Source="/Pic/5671647.png" />
+        <Viewbox Grid.ColumnSpan="3" Width="600">
+            <Frame Name="MyFrame" NavigationUIVisibility="Hidden">
+
+            </Frame>
+        </Viewbox>
+    </Grid>
+</Window>
