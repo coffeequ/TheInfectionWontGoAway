@@ -1,7 +1,0 @@
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\Library\.xml
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\Library\Epidemiology.dll
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Инфекция не пройдёт\Инфекция не пройдет\Library\Epidemiology.pdb
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Библиотека\Epidemiology\Epidemiology\obj\Release\Epidemiology.csproj.AssemblyReference.cache
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Библиотека\Epidemiology\Epidemiology\obj\Release\Epidemiology.csproj.CoreCompileInputs.cache
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Библиотека\Epidemiology\Epidemiology\obj\Release\Epidemiology.dll
-C:\Users\Savva\Desktop\Практики 3 курс\Курсовая работа\Библиотека\Epidemiology\Epidemiology\obj\Release\Epidemiology.pdb
